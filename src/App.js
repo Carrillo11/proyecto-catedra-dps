@@ -12,8 +12,15 @@ import BarraCarrito from './componentes/elementos/BarraCarrito/BarraCarrito';
 import BarraNav from './componentes/elementos/BarraNav/BarraNav';
 import Footer from './componentes//elementos/Footer/Footer';
 
-// Pagina inicio
+// Paginas del sitio
 import Inicio from './componentes/Inicio/Inicio';
+import ComoComprar from './componentes/ComoComprar/ComoComprar';
+import Faq from './componentes/PreguntasFrecuentes/PregunstasFrecuentes';
+import QuienesSomos from './componentes/QuienesSomos/QuienesSomos';
+
+// Paginas de inicio de sesion y registro
+import InicioSesion from './componentes/InicioSesion/InicioSesion';
+import Registro from './componentes/Registro/Registro';
 
 class App extends React.Component {
   constructor() {
@@ -34,25 +41,25 @@ class App extends React.Component {
           <Switch>
 
             <Route path="/comoComprar">
-              <h1>Pagina Como Comprar</h1>
+              <ComoComprar />
             </Route>
 
             <Route path="/faq">
-              <h1>Pagina de Preguntas Frecuentes</h1>
+              <Faq />
             </Route>
 
             <Route path="/quienesSomos">
-              <h1>Pagina de Quienes Somos</h1>
+              <QuienesSomos />
             </Route>
 
             {/* Paginas de inicio de sesion y registro */}
 
             <Route path="/inicioSesion">
-              <h1>Pagina de Inicio de Sesion</h1>
+              <InicioSesion />
             </Route>
 
             <Route path="/registro">
-              <h1>Pagina de Registro</h1>
+              <Registro />
             </Route>
 
             {/* Ruta de la pagina de inicio (Ruta raiz) */}

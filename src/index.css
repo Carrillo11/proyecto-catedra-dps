@@ -1,4 +1,5 @@
 body {
+  background: #F2F2F2;
   box-sizing: border-box;
   margin: 0;
   font-family: 'Roboto',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,4 +7,88 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  color: #543A12;
+  font-family: 'Merriweather', Arial, Helvetica, sans-serif;
+  font-size: 1.75em;
+  margin: 1.5em 0;
+  text-transform: uppercase;
+}
+
+/*****************************
+ESTILOS PARA LA PAGINA LOGIN
+******************************/
+
+.InicioSesion {
+  margin-bottom: 1.5em;
+}
+
+.InicioSesion .form,
+.InicioSesion .sin-cuenta {
+  border-bottom: 3px solid #D9D9D9;
+  margin: 0 auto;
+
+  max-width: 400px;
+  width: 95%;
+}
+
+.InicioSesion .form .grupo-inputs {
+  background: #FFFFFF;
+  border: 2px solid #D9D9D9;
+  padding: 1em 0;
+}
+
+.InicioSesion .form .grupo-inputs input {
+  border: none;
+  border-bottom: 2px solid #A67224;
+  color: #A67224;
+  font-size: 1em;
+  font-weight: bold;
+  margin: .75em 0;
+  outline: none;
+  padding: .75em;
+  width: 80%;
+}
+
+.InicioSesion .form .grupo-inputs input:focus {
+  border-color: #212121;
+}
+
+.InicioSesion .form .botonIniciarSesion,
+.InicioSesion .sin-cuenta .botonIrRegistro {
+  background: #2C9331;
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 2em 0;
+  padding: .75em 0;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.InicioSesion .form .botonIniciarSesion:hover {
+  background: #237627;
+}
+
+.InicioSesion .sin-cuenta {
+  color: #606060;
+  border: none;
+  font-weight: bold;
+}
+
+.InicioSesion .sin-cuenta .botonIrRegistro {
+  border: 3px solid #2C9331;
+  background: #F2F2F2;
+  color: #2C9331;
+  margin: 0;
+  margin-bottom: 1.5em;
+}
+
+.InicioSesion .sin-cuenta .botonIrRegistro:hover {
+  background: #FFFFFF;
 }
