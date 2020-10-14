@@ -1,0 +1,72 @@
+/* 
+Estilos para contenedor de la barra de navegacion
+y el logo
+*/
+.navbar-container {
+    background: #A67224;
+    color: #FFF9E5;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-container figure {
+    margin: 0;
+}
+
+.navbar-container figure img {
+    cursor: pointer;
+    margin: 1em;
+    width: 250px;
+}
+
+/* Estilos para la barra de navegacion */
+
+.navbar {
+    font-size: 1.1em;
+    font-weight: bold;
+    position: relative;
+    width: 90%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar > i {
+    cursor: pointer;
+    font-size: 2em;
+}
+
+.navbar ul {
+    background: #A67224;
+    height: 0;
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    /* display: none; */
+
+    position: absolute;
+    top: 100%;
+    right: 0;
+}
+
+.navbar ul li a {
+    color: #FFF9E5;
+    display: block;
+    padding: 1em 2em;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    background: #7D561C;
+}
+
+/* Estilos al estar activo el menu */
+
+.menu-activo {
+    height: 100vh;
+    overflow: visible;
+    /* display: none; */
+}
