@@ -1,0 +1,15 @@
+.carritoBar {
+    background: #543A12;
+    color: #FFF9E5;
+    font-weight: bold;
+    padding: .5em;
+    text-align: right;
+}
+
+.carritoBar span {
+    margin-right: 1em;
+}
+
+.carritoBar span i {
+    font-size: 1.25em;
+}

@@ -17,13 +17,12 @@ y el logo
 .navbar-contenedor figure img {
     cursor: pointer;
     margin: 1em;
-    width: 250px;
+    width: 200px;
 }
 
 /* Estilos para la barra de navegacion */
 
 .navbar {
-    font-size: 1.1em;
     font-weight: bold;
     position: relative;
     width: 75%;
@@ -54,7 +53,7 @@ y el logo
 }
 
 .navbar ul li a,
-.navbar-usuario ul li {
+.navbar-usuario ul li a {
     color: #FFF9E5;
     display: block;
     padding: 1em 2em;
@@ -62,20 +61,19 @@ y el logo
 }
 
 .navbar ul li a:hover,
-.navbar-usuario ul li:hover {
+.navbar-usuario ul li a:hover {
     background: #7D561C;
 }
 
 /* Estilos al estar activo el menu de la barra de navegacion*/
 
 ul.menu-activo {
-    height: 100vh;
+    height: 90vh;
 }
 
 /* Estilos para la barra de usuario */
 
 .navbar-usuario {
-    font-size: 1.1em;
     font-weight: bold;
     position: relative;
     width: 25%;
@@ -92,15 +90,11 @@ ul.menu-activo {
 }
 
 .navbar-usuario ul {
-    width: 100%;
-}
-
-.navbar-usuario ul li {
-    cursor: pointer;
+    max-width: 100%;
 }
 
 /* Estilos al estar activo el menu de la barra de usuario*/
 
 ul.menu-usuario-activo {
-    height: 100%;
+    height: 90px;
 }
