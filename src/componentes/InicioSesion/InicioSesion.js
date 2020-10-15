@@ -13,6 +13,7 @@ class InicioSesion extends Component {
                         <input type="password" placeholder="Contraseña" />
                     </div>
                     <button class="botonIniciarSesion">Iniciar sesión</button>
+                    <button class="botonIniciarSesion botonGoogle"><i class="lab la-google"></i> Iniciar sesión con Google</button>
                 </div>
                 <div className="existencia-cuenta">
                     <p>¿No tienes cuenta?</p>
