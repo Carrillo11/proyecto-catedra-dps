@@ -7,14 +7,14 @@ class InicioSesion extends Component {
         return (
             <div className="InicioSesion">
                 <h1>Iniciar sesión</h1>
-                <div className="form">
+                <div className="form-cuenta">
                     <div className="grupo-inputs">
                         <input type="text" placeholder="Nombre de usuario" />
                         <input type="password" placeholder="Contraseña" />
                     </div>
                     <button class="botonIniciarSesion">Iniciar sesión</button>
                 </div>
-                <div className="sin-cuenta">
+                <div className="existencia-cuenta">
                     <p>¿No tienes cuenta?</p>
                     <Link to="/registro"><button class="botonIrRegistro">Regístrate</button></Link>
                 </div>

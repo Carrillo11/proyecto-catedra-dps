@@ -18,15 +18,16 @@ h1 {
 }
 
 /*****************************
-ESTILOS PARA LA PAGINA LOGIN
+ESTILOS PARA LA PAGINAS LOGIN Y REGISTRO
 ******************************/
 
-.InicioSesion {
+.InicioSesion,
+.Registro {
   margin-bottom: 1.5em;
 }
 
-.InicioSesion .form,
-.InicioSesion .sin-cuenta {
+.form-cuenta,
+.existencia-cuenta {
   border-bottom: 3px solid #D9D9D9;
   margin: 0 auto;
 
@@ -34,13 +35,23 @@ ESTILOS PARA LA PAGINA LOGIN
   width: 95%;
 }
 
-.InicioSesion .form .grupo-inputs {
+.form-cuenta .grupo-inputs {
   background: #FFFFFF;
   border: 2px solid #D9D9D9;
+  margin-bottom: 2em;
   padding: 1em 0;
 }
 
-.InicioSesion .form .grupo-inputs input {
+.form-cuenta .grupo-inputs h3 {
+  color: #543A12;
+  font-family: 'Merriweather', Arial, Helvetica, sans-serif;
+  font-size: 1.3em;
+  margin: 0 auto .5em auto;
+  text-align: left;
+  width: 80%;
+}
+
+.form-cuenta .grupo-inputs input {
   border: none;
   border-bottom: 2px solid #A67224;
   color: #A67224;
@@ -52,12 +63,20 @@ ESTILOS PARA LA PAGINA LOGIN
   width: 80%;
 }
 
-.InicioSesion .form .grupo-inputs input:focus {
+.form-cuenta .grupo-inputs input:focus {
   border-color: #212121;
 }
 
-.InicioSesion .form .botonIniciarSesion,
-.InicioSesion .sin-cuenta .botonIrRegistro {
+.form-cuenta > input {
+  margin-bottom: 2em;
+}
+
+.form-cuenta label {
+  font-weight: bold;
+}
+
+.form-cuenta .botonIniciarSesion,
+.existencia-cuenta .botonIrRegistro {
   background: #2C9331;
   border: none;
   border-radius: 5px;
@@ -65,23 +84,23 @@ ESTILOS PARA LA PAGINA LOGIN
   cursor: pointer;
   font-size: 1em;
   font-weight: bold;
-  margin: 2em 0;
+  margin-bottom: 2em;
   padding: .75em 0;
   text-transform: uppercase;
   width: 100%;
 }
 
-.InicioSesion .form .botonIniciarSesion:hover {
+.form-cuenta .botonIniciarSesion:hover {
   background: #237627;
 }
 
-.InicioSesion .sin-cuenta {
+.existencia-cuenta {
   color: #606060;
   border: none;
   font-weight: bold;
 }
 
-.InicioSesion .sin-cuenta .botonIrRegistro {
+.existencia-cuenta .botonIrRegistro {
   border: 3px solid #2C9331;
   background: #F2F2F2;
   color: #2C9331;
@@ -89,6 +108,6 @@ ESTILOS PARA LA PAGINA LOGIN
   margin-bottom: 1.5em;
 }
 
-.InicioSesion .sin-cuenta .botonIrRegistro:hover {
+.existencia-cuenta .botonIrRegistro:hover {
   background: #FFFFFF;
 }
