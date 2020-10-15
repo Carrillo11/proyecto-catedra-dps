@@ -9,7 +9,7 @@ class Registro extends Component {
         return (
             <div className="Registro">
                 <div className="contenedor-info">
-                    <img src={imagen} alt="Imagen registro"/>
+                    <img src={imagen} alt="Imagen registro" />
                     <div className="info">
                         <h2>Registro</h2>
                         <p>Registrate para poder comprar y tambien para estar al tanto de nuestras promociones.</p>
