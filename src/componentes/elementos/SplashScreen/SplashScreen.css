@@ -1,0 +1,53 @@
+.SplashScreen {
+    background: rgba(166,114,36,1);
+    background: -moz-linear-gradient(top, rgba(166,114,36,1) 0%, rgba(84,58,18,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(166,114,36,1)), color-stop(100%, rgba(84,58,18,1)));
+    background: -webkit-linear-gradient(top, rgba(166,114,36,1) 0%, rgba(84,58,18,1) 100%);
+    background: -o-linear-gradient(top, rgba(166,114,36,1) 0%, rgba(84,58,18,1) 100%);
+    background: -ms-linear-gradient(top, rgba(166,114,36,1) 0%, rgba(84,58,18,1) 100%);
+    background: linear-gradient(to bottom, rgba(166,114,36,1) 0%, rgba(84,58,18,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a67224', endColorstr='#543a12', GradientType=0 );
+
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SplashScreen .contenedor figure {
+    margin: 0;
+}
+
+.SplashScreen .contenedor figure img {
+    margin-bottom: 2em;
+
+    max-width: 450px;
+    width: 85%;
+}
+
+.SplashScreen .contenedor .cargador {
+    border: 7px solid #FFFFFF;
+    border-top: 7px solid transparent;
+    border-radius: 50%;
+    height: 65px;
+    margin: 0 auto;
+    width: 65px;
+
+    animation-name: girar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

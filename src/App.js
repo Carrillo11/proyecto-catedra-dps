@@ -8,6 +8,7 @@ import {
 import './App.css';
 
 // Elementos de la pagina
+import SplashScreen from './componentes/elementos/SplashScreen/SplashScreen';
 import BarraCarrito from './componentes/elementos/BarraCarrito/BarraCarrito';
 import BarraNav from './componentes/elementos/BarraNav/BarraNav';
 import Footer from './componentes//elementos/Footer/Footer';
@@ -15,7 +16,7 @@ import Footer from './componentes//elementos/Footer/Footer';
 // Paginas del sitio
 import Inicio from './componentes/Inicio/Inicio';
 import ComoComprar from './componentes/ComoComprar/ComoComprar';
-import Faq from './componentes/PreguntasFrecuentes/PregunstasFrecuentes';
+import Faq from './componentes/PreguntasFrecuentes/PreguntasFrecuentes';
 import QuienesSomos from './componentes/QuienesSomos/QuienesSomos';
 
 // Paginas de inicio de sesion y registro
@@ -33,6 +34,8 @@ class App extends React.Component {
     return (
       <Router>
         <div className="App">
+          {/* <SplashScreen /> */}
+
           <header>
             <BarraCarrito />
             <BarraNav />
