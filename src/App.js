@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import './App.css';
+import { useFirebaseApp,useUser} from 'reactfire';
 
 // Elementos de la pagina
 import SplashScreen from './componentes/elementos/SplashScreen/SplashScreen';
@@ -23,6 +24,11 @@ import QuienesSomos from './componentes/QuienesSomos/QuienesSomos';
 import InicioSesion from './componentes/InicioSesion/InicioSesion';
 import Registro from './componentes/Registro/Registro';
 
+function appp(){ 
+const firebase = useFirebaseApp;
+console.log(firebase);
+console.log('holi');
+}
 class App extends React.Component {
   constructor() {
     super();
@@ -31,6 +37,7 @@ class App extends React.Component {
   }
 
   render() {
+    appp()
     return (
       <Router>
         <div className="App">
