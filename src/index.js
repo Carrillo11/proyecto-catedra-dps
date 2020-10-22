@@ -8,11 +8,12 @@ import firebaseConfig from './firebaseconfig';
 import {
   FirebaseAppProvider
 } from 'reactfire'
-import Cargando from './componentes/Cargando/Cargando';
+// import Cargando from './componentes/Cargando/Cargando';
+import SplashScreen from './componentes/elementos/SplashScreen/SplashScreen';
 
 ReactDOM.render((
   <FirebaseAppProvider firebaseConfig={firebaseConfig}>
-    <Suspense fallback= {<Cargando />}>
+    <Suspense fallback= {<SplashScreen />}>
       <App />
     </Suspense>
   </FirebaseAppProvider>),

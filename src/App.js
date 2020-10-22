@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 import './App.css';
-import { useFirebaseApp,useUser} from 'reactfire';
+import { useFirebaseApp, useUser} from 'reactfire';
 
 // Elementos de la pagina
 import SplashScreen from './componentes/elementos/SplashScreen/SplashScreen';
@@ -23,67 +23,61 @@ import QuienesSomos from './componentes/QuienesSomos/QuienesSomos';
 // Paginas de inicio de sesion y registro
 import InicioSesion from './componentes/InicioSesion/InicioSesion';
 import Registro from './componentes/Registro/Registro';
+import { app } from 'firebase';
 
-function appp(){ 
-const firebase = useFirebaseApp;
-console.log(firebase);
-console.log('holi');
-}
-class App extends React.Component {
-  constructor() {
-    super();
+// class App extends React.Component {
+const App = () => {
+  const firebase = useFirebaseApp();
+  // console.log(firebase);
+  const user = firebase.auth().currentUser;
 
-    this.state = {};
-  }
+  return (
+    <Router>
+      <div className="App">
+        {
+          user &&
+          <p>Usuario {user.email}</p>
+        }
+        <header>
+          <BarraCarrito />
+          <BarraNav />
+        </header>
 
-  render() {
-    appp()
-    return (
-      <Router>
-        <div className="App">
-          {/* <SplashScreen /> */}
+        <Switch>
 
-          <header>
-            <BarraCarrito />
-            <BarraNav />
-          </header>
+          <Route path="/comoComprar">
+            <ComoComprar />
+          </Route>
 
-          <Switch>
+          <Route path="/faq">
+            <Faq />
+          </Route>
 
-            <Route path="/comoComprar">
-              <ComoComprar />
-            </Route>
+          <Route path="/quienesSomos">
+            <QuienesSomos />
+          </Route>
 
-            <Route path="/faq">
-              <Faq />
-            </Route>
+          {/* Paginas de inicio de sesion y registro */}
 
-            <Route path="/quienesSomos">
-              <QuienesSomos />
-            </Route>
+          <Route path="/inicioSesion">
+            <InicioSesion />
+          </Route>
 
-            {/* Paginas de inicio de sesion y registro */}
+          <Route path="/registro">
+            <Registro />
+          </Route>
 
-            <Route path="/inicioSesion">
-              <InicioSesion />
-            </Route>
+          {/* Ruta de la pagina de inicio (Ruta raiz) */}
+          <Route path="/">
+            <Inicio />
+          </Route>
 
-            <Route path="/registro">
-              <Registro />
-            </Route>
+        </Switch>
 
-            {/* Ruta de la pagina de inicio (Ruta raiz) */}
-            <Route path="/">
-              <Inicio />
-            </Route>
-
-          </Switch>
-
-          <Footer />
-        </div>
-      </Router>
-    );
-  }
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
 export default App;
