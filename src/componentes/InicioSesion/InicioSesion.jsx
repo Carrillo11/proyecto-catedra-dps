@@ -17,22 +17,21 @@ const InicioSesion = ()=>{
     }
     
         return (
-            
             <div className="InicioSesion">
-        <h1>Iniciar sesión</h1>
-        <div className="form">
-            <div className="grupo-inputs">
-                <input type="email" id='email' placeholder="Email" onChange={ (ev)=> setEmail(ev.target.value)} />
-                <input type="password" placeholder="Contraseña" onChange={ (ev)=> setPassword(ev.target.value)}/>
+                <h1>Iniciar sesión</h1>
+                <div className="form-cuenta">
+                    <div className="grupo-inputs">
+                        <input type="email" id='email' placeholder="Email" onChange={ (ev)=> setEmail(ev.target.value)} />
+                        <input type="password" placeholder="Contraseña" onChange={ (ev)=> setPassword(ev.target.value)}/>
+                    </div>
+                    <button class="botonIniciarSesion" onClick ={submit}>Iniciar sesión</button>
+                    <button class="botonIniciarSesion botonGoogle"><i class="lab la-google"></i> Iniciar sesión con Google</button>
+                </div>
+                <div className="existencia-cuenta">
+                    <p>¿No tienes cuenta?</p>
+                    <Link to="/registro"><button class="botonIrRegistro">Regístrate</button></Link>
+                </div>
             </div>
-            <button class="botonIniciarSesion" onClick ={submit}>Iniciar sesión</button>
-        </div>
-        <div className="sin-cuenta">
-            <p>¿No tienes cuenta?</p>
-            <Link to="/registro"><button class="botonIrRegistro">Regístrate</button></Link>
-        
-        </div>
-    </div>
         );
 }
  
