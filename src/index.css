@@ -65,6 +65,25 @@ h1 {
 ESTILOS PARA LA PAGINAS LOGIN Y REGISTRO
 ****************************************/
 
+/* Encabezados para login y registro */
+
+.header-login-registro {
+  background: #A67224;
+  text-align: left;
+}
+
+.header-login-registro figure {
+  margin: 0;
+}
+
+.header-login-registro figure img {
+  cursor: pointer;
+  margin: 1em;
+  width: 200px;
+}
+
+/* Elementos de la pagina */
+
 .InicioSesion,
 .Registro {
   margin-bottom: 1.5em;
@@ -122,8 +141,8 @@ ESTILOS PARA LA PAGINAS LOGIN Y REGISTRO
 .form-cuenta .botonRegistrarse,
 .existencia-cuenta .botonIrRegistro,
 .existencia-cuenta .botonIrInicioSesion {
-  background: #2C9331;
-  border: 3px solid #2C9331;
+  background: #A67224;
+  border: 3px solid #855b1e;
   border-radius: 5px;
   color: #FFF;
   cursor: pointer;
@@ -136,13 +155,13 @@ ESTILOS PARA LA PAGINAS LOGIN Y REGISTRO
 }
 
 .form-cuenta .botonIniciarSesion:hover {
-  background: #237627;
+  background: #855b1e;
 }
 
 .form-cuenta .botonGoogle {
   background: #F2F2F2;
-  border: 3px solid #4285F4;
-  color: #4285F4;
+  border: 3px solid #2C9331;
+  color: #2C9331;
 }
 
 .form-cuenta .botonGoogle:hover {
@@ -161,9 +180,9 @@ ESTILOS PARA LA PAGINAS LOGIN Y REGISTRO
 
 .existencia-cuenta .botonIrRegistro,
 .existencia-cuenta .botonIrInicioSesion {
-  border: 3px solid #2C9331;
+  border: 3px solid #855b1e;
   background: #F2F2F2;
-  color: #2C9331;
+  color: #855b1e;
   margin: 0;
   margin-bottom: 1.5em;
 }

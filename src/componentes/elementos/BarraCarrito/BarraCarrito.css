@@ -1,6 +1,5 @@
 .carritoBar {
     background: #543A12;
-    color: #FFF9E5;
     font-weight: bold;
     padding: .5em;
     text-align: right;
@@ -12,4 +11,13 @@
 
 .carritoBar span i {
     font-size: 1.25em;
+}
+
+.carritoBar a {
+    color: #FFF9E5;
+    text-decoration: none;
+}
+
+.carritoBar a:hover {
+    text-decoration: underline;
 }

@@ -3,21 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import firebaseConfig from './firebaseconfig';
 
-import {
-  FirebaseAppProvider
-} from 'reactfire'
-// import Cargando from './componentes/Cargando/Cargando';
-import SplashScreen from './componentes/elementos/SplashScreen/SplashScreen';
+// import SplashScreen from './Componentes/elementos/SplashScreen/SplashScreen';
 
-ReactDOM.render((
-  <FirebaseAppProvider firebaseConfig={firebaseConfig}>
-    <Suspense fallback= {<SplashScreen />}>
-      <App />
-    </Suspense>
-  </FirebaseAppProvider>),
-  document.getElementById('root')
+ReactDOM.render(<App />, document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
