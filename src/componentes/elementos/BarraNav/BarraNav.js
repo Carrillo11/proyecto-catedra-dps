@@ -54,6 +54,9 @@ function BarraNav() {
                     <li>
                         <Link to="/faq"><i className="las la-question-circle"></i> Preguntas Frecuentes</Link>
                     </li>
+                    <li>
+                        <Link to="/contacto"><i className="las la-phone"></i> Contacto</Link>
+                    </li>
                 </ul>
             </nav>
             <nav className="navbar-usuario">

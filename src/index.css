@@ -302,3 +302,163 @@ ESTILOS PARA LA PAGINA DE ¿Como comprar?
   vertical-align: middle;
   border: 10px solid transparent;
 }
+
+/*********************************************
+ESTILOS PARA LA PAGINA DE CONTACTO
+**********************************************/
+
+.dscrp{
+  max-height: 375px;
+  overflow: hidden;
+  position: center;
+  width: 100%;
+  font-size: 1em;
+  margin: 0.5em ;
+  color: #543A12;
+  text-align: initial;
+}
+
+.dscrp .tel h2{
+  font-size: 1.3em;
+  text-align: left;
+  font-style: bold;
+  margin: 0.5em ;
+  color: #000;
+  font-family: 'Roboto';
+}
+
+.dscrp .tel a{
+  text-decoration: none;
+}
+
+.coment h2{
+  color: #543A12;
+  text-align: left;
+  margin: 0.5em;
+  font-size: 1.5em;
+  margin-top: 1em;
+}
+
+.coment p{
+  font-family: 'Roboto';
+  text-align: initial;
+  margin: 0.5em;
+  font-size: 1.1em;
+}
+
+.form-comentarios{
+  border-bottom: 3px solid #D9D9D9;
+  margin: 0 auto;
+  max-width: 400px;
+  width: 95%;
+}
+
+.form-comentarios .grupo-inputs {
+  background: #FFFFFF;
+  border: 2px solid #D9D9D9;
+  margin-bottom: 2em;
+  padding: 1em 0;
+}
+
+
+.form-comentarios .grupo-inputs input {
+  border: none;
+  border-bottom: 2px solid #A67224;
+  color: #A67224;
+  font-size: 1em;
+  font-weight: bold;
+  margin: .75em 0;
+  outline: none;
+  padding: .75em;
+  width: 80%;
+}
+
+.form-comentarios .grupo-inputs input:focus {
+  border-color: #212121;
+}
+
+.form-comentarios > input {
+  margin-bottom: 2em;
+}
+
+
+.form-comentarios .botonEnviarComentario{
+  background: #A67224;
+  border: 3px solid #855b1e;
+  border-radius: 5px;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 2em;
+  padding: .75em 0;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.form-comentarios .botonEnviarComentario:hover {
+  background: #855b1e;
+}
+
+.form-comentarios .grupo-inputs textarea{
+  width: 80%;
+  padding: 12px;
+  font-size: 1.3em;
+  font-weight: bold;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  height:200px;
+  border: 2px solid #A67224;
+}
+
+.ubicacion h2{
+  color: #543A12;
+  text-align: left;
+  margin: 0.5em;
+  margin-top: 1em;
+  font-size: 1.5em;
+}
+
+.ubicacion .direccion h2{
+  color: #000;
+  text-align: left;
+  margin: 0.5em;
+  font-size: 1.4em;
+}
+
+.mapa{
+  width: 80%;
+  height:300px;
+  margin-bottom: 3em;
+  margin-top: 1em;
+  margin-left: 10%;
+  margin-right: 10% ;
+  border: 2px solid #A67224;
+  border-radius: 4px;
+  text-align: center;
+}
+/*
+.grupos-pasos {
+  margin: 0 auto 3em auto;
+  width: 95%;
+}
+
+.grupos-pasos .pasos{
+  text-align: center;
+}
+
+.grupos-pasos .pasos h3 {
+  color: #543A12;
+  text-align: left;
+}
+
+.grupos-pasos .pasos img{
+  border: 3px solid #A67224;
+  max-width:100%;
+  max-height:100%;
+  vertical-align: middle;
+}
+.grupos-pasos .pasos p{
+  text-align: center;
+}*/
