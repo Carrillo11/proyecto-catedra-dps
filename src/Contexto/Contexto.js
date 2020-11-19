@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from 'react';
-import { fire } from '../firebase';
+import { fire, db } from '../firebase';
 import 'firebase/auth';
 
 import Swal from 'sweetalert2';
@@ -10,6 +10,7 @@ let { Provider } = UserContext;
 function UserProvider({children}) {
     let [user, setUser] = useState(null);
     let [load, setLoad] = useState(false);
+    let [carrito, setCarrito] = useState([]);
 
     // Cerrar sesion
     const handleLogOut = () => {
@@ -29,12 +30,26 @@ function UserProvider({children}) {
         })
     }
 
-    const getUser = () => {
+    const getUser = async () => {
         setLoad(false);
 
-        fire.auth().onAuthStateChanged(userAuth => {
+        await fire.auth().onAuthStateChanged(async (userAuth) => {
             if(userAuth) {
+                // Si existe el usuario, lo va a agregar al estado Usuario
                 setUser(userAuth);
+
+                // Revisa cada producto agregado al carrito y que pertenezca al usuario registrado
+                await db.collection("Carrito").onSnapshot((querySnapshot) => {
+                    const docs = [];
+                    
+                    querySnapshot.forEach((doc) => {
+                        if(doc.data().idUsuario === userAuth.uid) {
+                            docs.push({ ...doc.data(), id: doc.id });
+                        }
+                    });
+                    
+                    setCarrito(docs);
+                });
             }
             else {
                 setUser(null);
@@ -49,7 +64,7 @@ function UserProvider({children}) {
     }, []);
 
     return (
-        <Provider value={{user, setUser, handleLogOut, load}}>
+        <Provider value={{user, setUser, carrito, handleLogOut, load}}>
             {children}
         </Provider>
     );

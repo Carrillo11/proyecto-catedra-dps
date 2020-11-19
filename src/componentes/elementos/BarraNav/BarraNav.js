@@ -58,8 +58,8 @@ function BarraNav() {
             </nav>
             <nav className="navbar-usuario">
                 <figure onClick={() => cambioMenuUsuario()}>
-                    <p>Hola, <strong>{user.displayName}</strong></p>
-                    <img src={user.photoURL} alt=""/>
+                    <p>Hola, <strong>{user.displayName ? user.displayName : "Anónimo"}</strong></p>
+                    <img src={user.photoURL ? user.photoURL : "img/userImage.png"} alt=""/>
                 </figure>
 
                 <ul id="navMenuUsuario">
