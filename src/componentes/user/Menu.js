@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext  } from 'react';
 import { db } from "../../firebase";
+import Swal from "sweetalert2";
+import { UserContext } from "../../Contexto/Contexto";
 
 //Importamos la imagen de la pagina
 import imagen from '../elementos/img/menu.jpg';
 
 const Menu = () => {
    const [menu, setMenu] = useState([]);
-   const [carrito, setCarrito] = useState([]);
+   let { user } = useContext(UserContext);
+
 
    //Aqui obtenemos lo que esta en la base de firebase
    const getProductos = async () => {
@@ -20,28 +23,39 @@ const Menu = () => {
        });
    };
 
-    const AddCars = async (id) => {
-        console.log(menu, id)
+   const cambiarCantidad = async (valorNuevo, id) => {
+    const producto = menu.filter(producto => producto.id === id);
 
+    const infoProducto = {
+        nombre: producto[0].nombre,
+        descripcion: producto[0].descripcion,
+        precio: producto[0].precio,
+        cantidad: valorNuevo,
+        foto: producto[0].foto
+    }
+
+    await db.collection("Productos").doc(id).update(infoProducto);
+};
+
+    const AddCars = async (id) => {
+        const producto = menu.filter(producto => producto.id === id);
+
+        const infoProducto = {
+        nombre: producto[0].nombre,
+        descripcion: producto[0].descripcion,
+        precio: producto[0].precio,
+        cantidad: producto[0].cantidad,
+        idUsuario: user.uid,
+        foto: producto[0].foto
+    }
+             db.collection("Carrito").doc().set(infoProducto);
+        Swal.fire({
+            text: "Se agrego exitosamente!"
+        })
         
 
-      /*  db.collection("Productos").onSnapshot((querySnapshot) =>{
-            const car = [];
-            querySnapshot.forEach((doc) => {
-                if(doc.data().id == id){
-                    car.push({...doc.data(), id:doc.id})
-                }
-            });
-            setCarrito(car);
-        })
-
-
-        db.collection("Carrito").doc().set(carrito);
-          
-        */
       };
 
-   
    useEffect(() => {
        getProductos();
    }, []);
@@ -78,7 +92,7 @@ const Menu = () => {
                         <div className="cars">
                             <div>
                             
-                            <input type="number" className="form-control" min="1" value={men.cantidad} />
+                            <input type="number" className="form-control" min="1" value={men.cantidad} onChange={e => { cambiarCantidad(e.target.value, men.id) }} />
                            
                             </div>
                             <button className="butto" onClick={() => AddCars(men.id)}><i className="material-icons">add_shopping_cart</i> Agregar al carrito</button>

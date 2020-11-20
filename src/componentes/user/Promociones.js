@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext  } from 'react';
 import { db } from "../../firebase";
+import Swal from "sweetalert2";
+import { UserContext } from "../../Contexto/Contexto";
 
 //Importamos la imagen de la pagina
 import imagen from '../elementos/img/menu.jpg';
 
 const Promociones = () => {
    const [promo, setPromo] = useState([]);
-
+   let { user } = useContext(UserContext);
+   
    //Aqui obtenemos lo que esta en la base de firebase
    const getProductos = async () => {
        db.collection("Productos").onSnapshot((querySnapshot) =>{
@@ -20,6 +23,40 @@ const Promociones = () => {
        });
    };
    
+   const cambiarCantidad = async (valorNuevo, id) => {
+    const producto = promo.filter(producto => producto.id === id);
+
+    const infoProducto = {
+        nombre: producto[0].nombre,
+        descripcion: producto[0].descripcion,
+        precio: producto[0].precio,
+        descuento: producto[0].descuento,
+        cantidad: valorNuevo,
+        foto: producto[0].foto
+    }
+
+    await db.collection("Productos").doc(id).update(infoProducto);
+};
+
+    const AddCars = async (id) => {
+    const producto = promo.filter(producto => producto.id === id);
+
+    const infoProducto = {
+    nombre: producto[0].nombre,
+    descripcion: producto[0].descripcion,
+    precio: producto[0].descuento,
+    cantidad: producto[0].cantidad,
+    idUsuario: user.uid,
+    foto: producto[0].foto
+}
+         db.collection("Carrito").doc().set(infoProducto);
+    Swal.fire({
+        text: "Se agrego exitosamente!"
+    })
+    
+
+  };
+
    useEffect(() => {
        getProductos();
    }, []);
@@ -60,10 +97,10 @@ const Promociones = () => {
                         <div className="cars">
                             <div>
                             
-                            <input type="number" className="form-control" min="1" />
+                            <input type="number" className="form-control" min="1" value={men.cantidad} onChange={e => { cambiarCantidad(e.target.value, men.id) }} />
                            
                             </div>
-                            <button class="butto"><i className="material-icons">add_shopping_cart</i> Agregar al carrito</button>
+                            <button className="butto" onClick={() => AddCars(men.id)}><i className="material-icons">add_shopping_cart</i> Agregar al carrito</button>
                         </div>
                                </div>
                
