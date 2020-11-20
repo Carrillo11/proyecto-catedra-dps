@@ -400,3 +400,70 @@ ESTILOS PARA LA PAGINA DE CARRITO
 .contenedor-boton-compra button:hover {
   background: #206A23;
 }
+
+/*********************************************
+ESTILOS PARA LA PAGINA DE Promociones
+**********************************************/
+
+/* Estilos para los productos agregados */
+.antes{
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 23px;
+text-decoration-line: line-through;
+
+color: #DB271B;
+}
+.ahora{
+
+font-family: Roboto;
+font-style: normal;
+font-size: 25px;
+line-height: 29px;
+font-weight: bold;
+color: #2C9331;
+}
+.price {
+  margin: 0 auto 3em auto;
+  width: 45%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cars{
+  margin: 0 auto 3em auto;
+  width: 55%;
+  display: grid;
+  grid-template-columns: 1fr 3fr ;
+}
+
+
+.cars .butto{
+  background:#543A12;;
+  color: #FFF;
+  border-radius: 10%;
+}
+
+.cars .form-control{
+  font-size: 20px;
+}
+.material-icons{
+  font-size: 1.3em;
+  float: right;
+}
+
+.grupos-pasos .pasos h4 {
+  color: #543A12;
+  text-align: center;
+  font-size: 2.75em;
+  font-family: 'Merriweather', Arial, Helvetica, sans-serif;
+}
+.grupos-pasos .pasos p {
+  color: #543A12;
+  text-align: center;
+  font-size: 1.75em;
+font-weight: bold;
+}

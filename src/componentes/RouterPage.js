@@ -22,6 +22,9 @@ import ComoComprar from './user/ComoComprar';
 import Faq from './user/PreguntasFrecuentes';
 import QuienesSomos from './user/QuienesSomos';
 import Carrito from './user/Carrito';
+import Menu from './user/Menu';
+import Promociones from './user/Promociones';
+import Productos from './Productos/comproduc';
 
 // Paginas de inicio de sesion y registro
 import InicioSesion from './InicioSesion';
@@ -63,6 +66,18 @@ function RouterPage() {
 
                             <Route exact path="/carrito">
                                 <Carrito />
+                            </Route>
+
+                            <Route exact path="/promo">
+                                <Promociones />
+                            </Route>
+
+                            <Route exact path="/productos">
+                                <Productos />
+                            </Route>
+
+                            <Route exact path="/menu">
+                                <Menu />
                             </Route>
 
                             <Route>

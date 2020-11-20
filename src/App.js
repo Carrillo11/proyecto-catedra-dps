@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Importart componentes
-import RouterPage from './Componentes/RouterPage';
+import RouterPage from './componentes/RouterPage';
 
 // Importar contexto
 import { UserProvider } from './Contexto/Contexto';
