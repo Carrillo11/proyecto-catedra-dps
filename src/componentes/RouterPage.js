@@ -90,6 +90,10 @@ function RouterPage() {
                                 <Carrusel/>
                                 <Inicio/>
                             </Route>
+
+                            <Route>
+                                <Redirect to="/inicio" />
+                            </Route>
                             
                         </Switch>
 
