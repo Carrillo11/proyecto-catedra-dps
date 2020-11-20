@@ -54,6 +54,9 @@ function BarraNav() {
                     <li>
                         <Link to="/faq"><i className="las la-question-circle"></i> Preguntas Frecuentes</Link>
                     </li>
+                   <li>
+                        <Link to="/contacto"><i className="las la-phone"></i> Contacto</Link>
+                    </li>
                     <li>
                         <Link to="/menu"><i class="las la-utensils"></i> Menú </Link>
                     </li>
@@ -62,7 +65,7 @@ function BarraNav() {
                     </li>
                     <li>
                         <Link to="/productos"><i class="las la-plus-circle"></i> Agregar Productos </Link>
-                    </li>
+                   </li>
                 </ul>
             </nav>
             <nav className="navbar-usuario">

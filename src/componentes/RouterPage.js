@@ -20,6 +20,7 @@ import Footer from './elementos/Footer/Footer';
 import Inicio from './user/Inicio';
 import ComoComprar from './user/ComoComprar';
 import Faq from './user/PreguntasFrecuentes';
+import Contactos from './user/Contactos';
 import QuienesSomos from './user/QuienesSomos';
 import Carrito from './user/Carrito';
 import Menu from './user/Menu';
@@ -58,6 +59,10 @@ function RouterPage() {
 
                             <Route exact path="/faq">
                                 <Faq />
+                            </Route>
+
+                            <Route exact path="/contacto">
+                                <Contactos />
                             </Route>
 
                             <Route exact path="/quienesSomos">

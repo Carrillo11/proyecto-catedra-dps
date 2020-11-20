@@ -20,7 +20,7 @@ function Footer() {
                     <h3>Servicio al cliente</h3>
                     <ul>
                         <li><Link to="/faq">Preguntas frecuentes</Link></li>
-                        <li><Link to="/contactos">Contactos</Link></li>
+                        <li><Link to="/contacto">Contactos</Link></li>
                     </ul>
                 </div>
                 <div className="redesSociales">
