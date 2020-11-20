@@ -22,6 +22,7 @@ import ComoComprar from './user/ComoComprar';
 import Faq from './user/PreguntasFrecuentes';
 import Contactos from './user/Contactos';
 import QuienesSomos from './user/QuienesSomos';
+import Carrito from './user/Carrito';
 
 // Paginas de inicio de sesion y registro
 import InicioSesion from './InicioSesion';
@@ -29,7 +30,7 @@ import Registro from './Registro';
 
 // class App extends React.Component {
 function RouterPage() {
-    let { user, load } = useContext(UserContext);
+    let { user, load, carrito } = useContext(UserContext);
 
     return (
         <Router>
@@ -63,6 +64,10 @@ function RouterPage() {
 
                             <Route exact path="/quienesSomos">
                                 <QuienesSomos />
+                            </Route>
+
+                            <Route exact path="/carrito">
+                                <Carrito />
                             </Route>
 
                             <Route>
