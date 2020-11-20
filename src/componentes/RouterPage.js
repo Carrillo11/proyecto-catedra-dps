@@ -15,6 +15,7 @@ import SplashScreen from './elementos/SplashScreen/SplashScreen';
 import BarraCarrito from './elementos/BarraCarrito/BarraCarrito';
 import BarraNav from './elementos/BarraNav/BarraNav';
 import Footer from './elementos/Footer/Footer';
+import Carrusel from './elementos/carrusel/carrusel'
 
 // Paginas del sitio
 import Inicio from './user/Inicio';
@@ -85,8 +86,9 @@ function RouterPage() {
                                 <Menu />
                             </Route>
 
-                            <Route>
-                                <Redirect to="/inicio" />
+                            <Route exact path="/inicio" >
+                                <Carrusel/>
+                                <Inicio/>
                             </Route>
                             
                         </Switch>

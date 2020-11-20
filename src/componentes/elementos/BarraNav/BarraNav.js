@@ -43,7 +43,7 @@ function BarraNav() {
 
                 <ul id="navMenu">
                     <li>
-                        <Link to="/"><i className="las la-home"></i> Inicio</Link>
+                        <Link to="/inicio"><i className="las la-home"></i> Inicio</Link>
                     </li>
                     <li>
                         <Link to="/comoComprar"><i className="las la-credit-card"></i> Como comprar</Link>
