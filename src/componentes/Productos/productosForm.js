@@ -1,14 +1,11 @@
 import React, { useState, useEffect, useContext } from "react";
 import { db } from "../../firebase";
-import { UserContext } from "../../Contexto/Contexto";
 import Swal from "sweetalert2";
 
 const ProductosForm = (props) => {
   
-  let { user } = useContext(UserContext);
   
   const initialStateValues = {
-    idUsuario : "",
     nombre: "",
     descripcion: "",
     precio: "",
@@ -63,20 +60,7 @@ const ProductosForm = (props) => {
 
   return (
     <form onSubmit={handleSubmit} className="card card-body border-primary">
-      <div className="form-group input-group">
-        <div className="input-group-text bg-light">
-          <i className="material-icons">person_pin</i>
-        </div>
-        <input
-          type="text"
-          readonly="readonly"
-          className="form-control"
-          placeholder="Ingrese nombre del producto"
-          value={values.idUsuario = user.uid}
-          name="idUsuario"
-          onChange={handleInputChange}
-        />
-      </div>
+      
       <div className="form-group input-group">
         <div className="input-group-text bg-light">
         <i class="las la-tags"></i>

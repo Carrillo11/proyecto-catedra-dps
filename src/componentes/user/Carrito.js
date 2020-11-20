@@ -76,7 +76,7 @@ function Carrito() {
                             </div>
                             <div className="contenido">
                                 <p>Precio:</p>
-                                <p>${(producto.precio).toFixed(2)}</p>
+                                <p>${(producto.precio)}</p>
                             </div>
                             <div className="contenido">
                                 <p>Cantidad:</p>
