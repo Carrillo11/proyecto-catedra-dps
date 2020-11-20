@@ -508,3 +508,100 @@ font-weight: bold;
   border-radius: 4px;
   text-align: center;
 }
+
+/***************
+ESTILOS PARA LA PAGINA DE CARRITO
+****************/
+
+/* Estilos para los productos agregados */
+
+.contenedor-carrito {
+  border: 2px solid #D9D9D9;
+  margin: 0 auto;
+  margin-bottom: 2em;
+  max-width: 750px;
+  padding: 10px;
+  width: 90%;
+}
+
+.contenedor-carrito header {
+  background-color: #A67224;
+  color: #FFF;
+  text-align: right;
+}
+
+.contenedor-carrito header i {
+  cursor: pointer;
+  font-size: 1.5em;
+  margin: 5px 10px;
+}
+
+.contenedor-carrito .producto {
+  background: #FFF;
+  margin-bottom: 1em;
+}
+
+.contenedor-carrito .producto .contenido,
+.contenedor-carrito .total-compra .contenido  {
+  border-bottom: 2px solid #E7E7E7;
+  padding: 0 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contenedor-carrito .producto .contenido p:first-child {
+  font-weight: bold;
+}
+
+.contenedor-carrito .producto .contenido input {
+  font-weight: bold;
+  font-size: 1em;
+  height: 30px;
+  text-align: center;
+  width: 85px;
+}
+
+.contenedor-carrito .producto .contenido .total {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Estilos para el total de los productos en el carrito */
+
+.contenedor-carrito .total-compra {
+  background: #FFF9E5;
+}
+
+.contenedor-carrito .total-compra .contenido {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.contenedor-carrito .total-compra .contenido:last-child {
+  color: #2C9331;
+  font-size: 1.4em;
+}
+
+/* Estilos para el boton de compra */
+
+.contenedor-boton-compra {
+  margin-bottom: 4em;
+}
+
+.contenedor-boton-compra button {
+  background: #2C9331;
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 1em 2em;
+  text-transform: uppercase;
+}
+
+.contenedor-boton-compra button:hover {
+  background: #206A23;
+}

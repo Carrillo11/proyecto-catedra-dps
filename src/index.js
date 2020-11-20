@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import 'bootswatch/dist/litera/bootstrap.min.css';
+import 'bootswatch/dist/lumen/bootstrap.min.css';
 import { render } from '@testing-library/react';
 
 // import SplashScreen from './Componentes/elementos/SplashScreen/SplashScreen';
