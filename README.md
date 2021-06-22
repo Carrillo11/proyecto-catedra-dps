@@ -7,7 +7,7 @@ Aplicacion movil web desarrollada con react.js y base de datos en tiempo real fi
 
 - El usuario puede realizar compras al restaurante atravez de la pagina.
 
-[Video demostrativo.](httphttps://bit.ly/2SWghvj:// "Video demostrativo.")
+[Video Demostrativo](https://bit.ly/2SWghvj "Video Demostrativo")
 
 ### Pre-requisitos
 Para poder ejecutar el proyecto se debe tener instalado obligatoriamente node.js
