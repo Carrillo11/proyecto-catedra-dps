@@ -9,6 +9,7 @@ class ComoComprar extends Component {
         return (
             <div class="ComoComprar">
                 <div class="contenedor-info">
+                    
                     <img src={imagen} alt="Imagen registro " />
                     <div class="info">
                         <h2>¿Como comprar?</h2>
@@ -50,5 +51,5 @@ class ComoComprar extends Component {
         );
     }
 }
- 
+ //Con export nos ayuda a poder utilizar su contenido de dicho componente 
 export default ComoComprar;

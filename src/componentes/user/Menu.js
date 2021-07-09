@@ -22,7 +22,7 @@ const Menu = () => {
            setMenu(docs);
        });
    };
-
+//En dado caso se actuaize un nuevo pedido, crearemos una funcion para que este pendiente de los camnios
    const cambiarCantidad = async (valorNuevo, id) => {
     const producto = menu.filter(producto => producto.id === id);
 

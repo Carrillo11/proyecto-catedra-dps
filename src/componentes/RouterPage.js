@@ -32,7 +32,7 @@ import Productos from './Productos/comproduc';
 import InicioSesion from './InicioSesion';
 import Registro from './Registro';
 
-// class App extends React.Component {
+// class App extends React.Component { --- ocuparemos function dado que es una mejor y otra forma de utilizar componentes
 function RouterPage() {
     let { user, load, carrito } = useContext(UserContext);
 

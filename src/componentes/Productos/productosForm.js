@@ -1,3 +1,4 @@
+//importaciones de librerias y de componentes
 import React, { useState, useEffect, useContext } from "react";
 import { db } from "../../firebase";
 import Swal from "sweetalert2";

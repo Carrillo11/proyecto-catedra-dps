@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { fire, db } from './../../firebase';
 
+//importando libreria para mensajes
 import Swal from 'sweetalert2';
 
 //Importamos la imagen de la pagina
@@ -10,11 +11,12 @@ import imagen from '../elementos/img/carrito.jpg';
 import { UserContext } from './../../Contexto/Contexto';
 
 function Carrito() {
+    //Creando una variable 
     let { carrito } = useContext(UserContext);
-
+// Funcion que nos ayudara a traer la informacion de la compra
     const cambiarCantidad = async (valorNuevo, id) => {
         const producto = carrito.filter(producto => producto.id === id);
-
+// Llenamos las variables con su respectiva informacion
         const infoProducto = {
             nombre: producto[0].nombre,
             descripcion: producto[0].descripcion,
@@ -22,10 +24,10 @@ function Carrito() {
             cantidad: valorNuevo,
             idUsuario: producto[0].idUsuario
         }
-
+// Actualizamos cada que se agrege 
         await db.collection("Carrito").doc(id).update(infoProducto);
     };
-
+// Eliminar el producto
     const eliminarProducto = id => {
         Swal.fire({
             title: '¿Está seguro?',
@@ -48,7 +50,7 @@ function Carrito() {
             }
         })
     };
-
+//Creamos los formularios de como queremos que se presente la informacion
     return (
         <div className="Carrito">
             <div class="contenedor-info">
@@ -109,5 +111,6 @@ function Carrito() {
         </div>
     );
 }
- 
+
+//Con export nos ayuda a poder utilizar su contenido de dicho componente 
 export default Carrito;
